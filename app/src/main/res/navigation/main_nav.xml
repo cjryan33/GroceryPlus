@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/intro_nav"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.groceryappplus.view.fragment.SplashFragment"
+        tools:layout="@layout/activity_splash_screen">
+        <action android:id="@+id/action_to_onBoard"
+            app:destination="@+id/viewPagerFragment">
+
+        </action>
+
+        <action
+            android:id="@+id/action_to_sign_in"
+            app:destination="@id/signInActivity">
+
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.example.groceryappplus.view.fragment.onboarding.ViewPagerFragment">
+
+        <action
+            android:id="@+id/action_skip_to_sign_in"
+            app:destination="@id/signInActivity">
+
+        </action>
+        <action
+            android:id="@+id/action_to_sign_in"
+            app:destination="@id/signInActivity">
+
+        </action>
+    </fragment>
+
+    <activity
+        android:id="@+id/signInActivity"
+        android:name="com.example.groceryappplus.view.activity.SignInActivity">
+
+    </activity>
+</navigation>
