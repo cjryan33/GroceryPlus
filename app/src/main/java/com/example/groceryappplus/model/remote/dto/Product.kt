@@ -1,4 +1,4 @@
-package com.example.groceryappprojectcharles.model.remote.data
+package com.example.groceryappplus.model.remote.dto
 
 data class SearchData(
     val __v: Int,
@@ -9,7 +9,7 @@ data class SearchData(
     val image: String,
     val mrp: Int,
     val position: Int,
-    val price: Int,
+    val price: Float,
     val productName: String,
     val quantity: Int,
     val status: Boolean,
